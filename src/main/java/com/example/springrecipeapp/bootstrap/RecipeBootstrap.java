@@ -107,17 +107,16 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 
         Notes guacNotes = new Notes();
         guacNotes.setRecipeNotes("Add recipe notes here");
-        guacNotes.setRecipe(guacRecipe);
         guacRecipe.setNotes(guacNotes);
 
-        guacRecipe.getIngredients().add(new Ingredient("ripe avocados", new BigDecimal(2), eachUom));
-        guacRecipe.getIngredients().add(new Ingredient("salt", new BigDecimal("0.5"), teaSpoonUom));
-        guacRecipe.getIngredients().add(new Ingredient("lime/lemon juice", new BigDecimal(2), tableSpoonUom));
-        guacRecipe.getIngredients().add(new Ingredient("minced red onion", new BigDecimal(2), tableSpoonUom));
-        guacRecipe.getIngredients().add(new Ingredient("chillies", new BigDecimal(2), eachUom));
-        guacRecipe.getIngredients().add(new Ingredient("cilantro", new BigDecimal(2), tableSpoonUom));
-        guacRecipe.getIngredients().add(new Ingredient("black pepper", new BigDecimal(2), dashUom));
-        guacRecipe.getIngredients().add(new Ingredient("tomato", new BigDecimal(1), eachUom));
+        guacRecipe.addIngredient(new Ingredient("ripe avocados", new BigDecimal(2), eachUom));
+        guacRecipe.addIngredient(new Ingredient("salt", new BigDecimal("0.5"), teaSpoonUom));
+        guacRecipe.addIngredient(new Ingredient("lime/lemon juice", new BigDecimal(2), tableSpoonUom));
+        guacRecipe.addIngredient(new Ingredient("minced red onion", new BigDecimal(2), tableSpoonUom));
+        guacRecipe.addIngredient(new Ingredient("chillies", new BigDecimal(2), eachUom));
+        guacRecipe.addIngredient(new Ingredient("cilantro", new BigDecimal(2), tableSpoonUom));
+        guacRecipe.addIngredient(new Ingredient("black pepper", new BigDecimal(2), dashUom));
+        guacRecipe.addIngredient(new Ingredient("tomato", new BigDecimal(1), eachUom));
 
         guacRecipe.getCategories().add(americanCategory);
 
